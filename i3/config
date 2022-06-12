@@ -51,7 +51,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
 bindsym $mod+j focus left
@@ -203,4 +203,5 @@ workspace $ws6 output DP-2 eDP-1
 workspace $ws7 output DP-2 eDP-1
 workspace $ws8 output DP-2 eDP-1
 workspace $ws9 output DP-2 eDP-1
-workspace $ws10 output DP-2 eDP-1
+workspace $ws10 output eDP-1 DP-2
+
