@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
+alias gf='git fetch'
 
 # ANSIBLE CONFIGURATION
 export ANSIBLE_INVENTORY="$HOME/ansible/myhosts.yml"
