@@ -72,6 +72,8 @@ local config = {
       --   end,
       -- },
       { 'ellisonleao/gruvbox.nvim' },
+      -- Add vim-surround (ds, cs, ys, yss commands)
+      { "tpope/vim-surround" },
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -114,7 +116,7 @@ local config = {
         bg = "#3c3836"
       }
     }
-  },
+  },]
 
   -- LuaSnip Options
   luasnip = {

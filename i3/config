@@ -186,17 +186,17 @@ exec xinput set-prop "Synaptics TM3289-021" "libinput Tapping Enabled" 1
 
 # Custom app assignments to workspaces
 exec brave-browser
-exec gnome-terminal
 exec slack
+exec --no-startup-id i3-msg 'workspace $ws3; exec gnome-terminal; workspace $ws2;'
+exec --no-startup-id i3-msg 'workspace $ws2; exec gnome-terminal; workspace $ws1;'
 assign [class="Brave-browser"] $ws1
-assign [class="Gnome-terminal"] $ws2
 assign [class="Slack"] $ws10
 for_window [class="Spotify"] move to workspace $ws10
 
 # Monitor Assignments
 workspace $ws1 output DP-2 eDP-1 
 workspace $ws2 output DP-2 eDP-1 
-workspace $ws3 output eDP-1 DP-2
+workspace $ws3 output DP-2 eDP-1
 workspace $ws4 output DP-2 eDP-1
 workspace $ws5 output DP-2 eDP-1
 workspace $ws6 output DP-2 eDP-1
