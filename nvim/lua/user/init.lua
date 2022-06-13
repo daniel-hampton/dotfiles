@@ -116,7 +116,7 @@ local config = {
         bg = "#3c3836"
       }
     }
-  },]
+  },
 
   -- LuaSnip Options
   luasnip = {
