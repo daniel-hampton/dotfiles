@@ -61,7 +61,7 @@ local config = {
     init = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
-
+      --
       -- You can also add new plugins here as well:
       -- { "andweeb/presence.nvim" },
       -- {
@@ -71,9 +71,11 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
-      { 'ellisonleao/gruvbox.nvim' },
+      { "ellisonleao/gruvbox.nvim" },
       -- Add vim-surround (ds, cs, ys, yss commands)
       { "tpope/vim-surround" },
+      -- Adds multi-cursor support
+      { "mg979/vim-visual-multi" },
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -115,7 +117,36 @@ local config = {
         fg = "#887b6d",
         bg = "#3c3836"
       }
-    }
+    },
+    -- Include hidden (dotfiles) in search results
+    telescope = {
+      defaults = {
+        file_ignore_patterns = { ".git/" },
+        -- Added --hidden flag so .dotfiles are included in grep searches
+        vimgrep_arguments = {
+          "rg",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden",
+        },
+
+      },
+      pickers = {
+        find_files = { hidden = true },
+      },
+    },
+    ["neo-tree"] = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+        }
+      }
+    },
+    cinnamon = {default_keymaps = false},
   },
 
   -- LuaSnip Options

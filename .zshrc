@@ -123,3 +123,7 @@ export PATH="$PATH":"$HOME/flutter/bin/cache/dart-sdk/bin"
 
 
 . "$HOME/.cargo/env"
+
+# Add timestamp to prompt
+# PROMPT=$PROMPT' %{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}]'
+
