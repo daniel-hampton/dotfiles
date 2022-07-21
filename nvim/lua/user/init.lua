@@ -76,6 +76,8 @@ local config = {
       { "tpope/vim-surround" },
       -- Adds multi-cursor support
       { "mg979/vim-visual-multi" },
+      -- Vim Easy Align
+      { "junegunn/vim-easy-align"}
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -232,6 +234,12 @@ local config = {
   polish = function()
     -- Set key bindings
     vim.keymap.set("n", "<C-s>", ":w!<CR>")
+
+    -- My custom key bindings
+    vim.keymap.set("n", "ga", ":LiveEasyAlign<CR>")
+    vim.keymap.set("v", "ga", ":LiveEasyAlign<CR>")
+    -- vim.keymap.set("n", "ga", ":EasyAlign<CR>")
+    -- vim.keymap.set("v", "ga", ":EasyAlign<CR>")
 
     -- Set autocommands
     vim.api.nvim_create_augroup("packer_conf", { clear = true })
