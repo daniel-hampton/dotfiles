@@ -2,7 +2,8 @@
 
 # TODO: install jetbrains mono fonts.
 
-# TODO: install i3, i3blocks, feh, compton, rofi
+# pavucontrol: pulse audio control
+# TODO: install i3, i3blocks, feh, compton, rofi, pavucontrol
 # TODO: install neovim & astronvim config.
 # TODO: install zsh, oh-my-zsh
 
