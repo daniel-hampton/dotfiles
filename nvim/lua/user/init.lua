@@ -106,6 +106,7 @@ local config = {
       config.sources = {
         -- Set a formatter
         null_ls.builtins.formatting.prettierd,
+        -- null_ls.builtins.formatting.rustfmt,
         -- Set a linter
         null_ls.builtins.diagnostics.rubocop,
       }

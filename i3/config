@@ -206,6 +206,9 @@ workspace $ws10 output eDP-1 DP-2
 # Custom Keybinds
 bindsym Print exec flameshot gui
 
+## Moving workspaces between screens
+bindsym $mod+p move workspace to output right
+
 # Color Theme
 set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
