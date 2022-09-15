@@ -95,7 +95,9 @@ local config = {
       -- Adds multi-cursor support
       { "mg979/vim-visual-multi" },
       -- Vim Easy Align
-      { "junegunn/vim-easy-align"}
+      { "junegunn/vim-easy-align"},
+      -- treesitter plugin for 'sticky' LSP context
+      { "nvim-treesitter/nvim-treesitter-context" }
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -259,6 +261,7 @@ local config = {
     vim.keymap.set("v", "ga", ":LiveEasyAlign<CR>")
     -- vim.keymap.set("n", "ga", ":EasyAlign<CR>")
     -- vim.keymap.set("v", "ga", ":EasyAlign<CR>")
+    vim.keymap.set("n", "<C-w>o", ":%bd|edit#|bd#<CR>", {desc="Close other buffers"})
 
     -- Set autocommands
     vim.api.nvim_create_augroup("packer_conf", { clear = true })

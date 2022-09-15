@@ -141,3 +141,7 @@ export PATH="$PATH":"$HOME/flutter/bin/cache/dart-sdk/bin"
 export PNPM_HOME="/home/dhampton/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# Add Golang to path
+export PATH="$PATH:$PATH:/usr/local/go/bin"
+
