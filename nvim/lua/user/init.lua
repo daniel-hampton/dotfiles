@@ -1,7 +1,7 @@
 local config = {
 
   -- Set colorscheme
-  -- colorscheme = "gruvbox",
+  -- colorscheme = "catppuccin",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -11,6 +11,7 @@ local config = {
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
+      catppuccin_flavour = "macchiato",
     },
   },
 
@@ -71,23 +72,36 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
-      {"ellisonleao/gruvbox.nvim",
+      -- {"ellisonleao/gruvbox.nvim",
+      --   config = function()
+      --     require("gruvbox").setup({
+      --       undercurl = true,
+      --       underline = true,
+      --       bold = true,
+      --       italic = false,
+      --       strikethrough = true,
+      --       invert_selection = false, invert_signs = false,
+      --       invert_tabline = false,
+      --       invert_intend_guides = false,
+      --       inverse = true, -- invert background for search, diffs, statuslines and errors
+      --       contrast = "", -- can be "hard", "soft" or empty string
+      --       overrides = {},
+      --     })
+      --     vim.cmd("colorscheme gruvbox")
+      --   end
+      -- },
+      { "catppuccin/nvim", as = "catppuccin",
         config = function()
-          require("gruvbox").setup({
-            undercurl = true,
-            underline = true,
-            bold = true,
-            italic = false,
-            strikethrough = true,
-            invert_selection = false,
-            invert_signs = false,
-            invert_tabline = false,
-            invert_intend_guides = false,
-            inverse = true, -- invert background for search, diffs, statuslines and errors
-            contrast = "", -- can be "hard", "soft" or empty string
-            overrides = {},
+          require("catppuccin").setup({
+            transparent_background = false,
+            integrations = {
+              notify = true,
+            },
+            styles = {
+              comments = {},
+            },
           })
-          vim.cmd("colorscheme gruvbox")
+          vim.cmd("colorscheme catppuccin")
         end
       },
       -- Add vim-surround (ds, cs, ys, yss commands)
@@ -127,6 +141,9 @@ local config = {
     end,
     treesitter = {
       ensure_installed = { "lua" },
+    },
+    notify = {
+      background_colour = "#282429"
     },
     ["nvim-lsp-installer"] = {
       ensure_installed = { "sumneko_lua" },
@@ -170,6 +187,7 @@ local config = {
       }
     },
     cinnamon = {default_keymaps = false},
+    ["aerial"] = {}
   },
 
   -- LuaSnip Options
