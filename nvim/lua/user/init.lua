@@ -1,7 +1,7 @@
 local config = {
 
   -- Set colorscheme
-  -- colorscheme = "catppuccin",
+  -- colorscheme = "darcula",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -11,7 +11,6 @@ local config = {
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
-      catppuccin_flavour = "macchiato",
     },
   },
 
@@ -72,37 +71,23 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
-      -- {"ellisonleao/gruvbox.nvim",
-      --   config = function()
-      --     require("gruvbox").setup({
-      --       undercurl = true,
-      --       underline = true,
-      --       bold = true,
-      --       italic = false,
-      --       strikethrough = true,
-      --       invert_selection = false, invert_signs = false,
-      --       invert_tabline = false,
-      --       invert_intend_guides = false,
-      --       inverse = true, -- invert background for search, diffs, statuslines and errors
-      --       contrast = "", -- can be "hard", "soft" or empty string
-      --       overrides = {},
-      --     })
-      --     vim.cmd("colorscheme gruvbox")
-      --   end
-      -- },
-      { "catppuccin/nvim", as = "catppuccin",
-        config = function()
-          require("catppuccin").setup({
-            transparent_background = false,
-            integrations = {
-              notify = true,
-            },
-            styles = {
-              comments = {},
-            },
-          })
-          vim.cmd("colorscheme catppuccin")
-        end
+      {"ellisonleao/gruvbox.nvim",
+       config = function()
+         require("gruvbox").setup({
+           undercurl = true,
+           underline = true,
+           bold = true,
+           italic = false,
+           strikethrough = true,
+           invert_selection = false, invert_signs = false,
+           invert_tabline = false,
+           invert_intend_guides = false,
+           inverse = true, -- invert background for search, diffs, statuslines and errors
+           contrast = "", -- can be "hard", "soft" or empty string
+           overrides = {},
+         })
+         vim.cmd("colorscheme gruvbox")
+       end
       },
       -- Add vim-surround (ds, cs, ys, yss commands)
       { "tpope/vim-surround" },
@@ -111,7 +96,10 @@ local config = {
       -- Vim Easy Align
       { "junegunn/vim-easy-align"},
       -- treesitter plugin for 'sticky' LSP context
-      { "nvim-treesitter/nvim-treesitter-context" }
+      { "nvim-treesitter/nvim-treesitter-context" },
+      -- Harpoon for quick file navigation
+      { "ThePrimeagen/harpoon" },
+
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -280,6 +268,15 @@ local config = {
     -- vim.keymap.set("n", "ga", ":EasyAlign<CR>")
     -- vim.keymap.set("v", "ga", ":EasyAlign<CR>")
     vim.keymap.set("n", "<C-w>o", ":%bd|edit#|bd#<CR>", {desc="Close other buffers"})
+
+    -- Harpoon
+    local opts = { noremap = true, silent = true }
+    vim.keymap.set("n", "<leader>fm", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
+    vim.keymap.set("n", "<leader>fj", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
+    vim.keymap.set("n", "<leader>fk", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
+    vim.keymap.set("n", "<leader>fl", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
+    vim.keymap.set("n", "<leader>f;", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
+    vim.keymap.set("n", "<leader>fh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
 
     -- Set autocommands
     vim.api.nvim_create_augroup("packer_conf", { clear = true })
