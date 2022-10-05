@@ -6,7 +6,7 @@ local config = {
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
     opt = {
-      relativenumber = true, -- sets vim.opt.relativenumber
+      relativenumber = false, -- sets vim.opt.relativenumber
       background = "dark",
     },
     g = {
@@ -71,24 +71,25 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
-      {"ellisonleao/gruvbox.nvim",
-       config = function()
-         require("gruvbox").setup({
-           undercurl = true,
-           underline = true,
-           bold = true,
-           italic = false,
-           strikethrough = true,
-           invert_selection = false, invert_signs = false,
-           invert_tabline = false,
-           invert_intend_guides = false,
-           inverse = true, -- invert background for search, diffs, statuslines and errors
-           contrast = "", -- can be "hard", "soft" or empty string
-           overrides = {},
-         })
-         vim.cmd("colorscheme gruvbox")
-       end
-      },
+      -- GRUVBOX THEME
+      -- {"ellisonleao/gruvbox.nvim",
+      --  config = function()
+      --    require("gruvbox").setup({
+      --      undercurl = true,
+      --      underline = true,
+      --      bold = true,
+      --      italic = false,
+      --      strikethrough = true,
+      --      invert_selection = false, invert_signs = false,
+      --      invert_tabline = false,
+      --      invert_intend_guides = false,
+      --      inverse = true, -- invert background for search, diffs, statuslines and errors
+      --      contrast = "", -- can be "hard", "soft" or empty string
+      --      overrides = {},
+      --    })
+      --    vim.cmd("colorscheme gruvbox")
+      --  end
+      -- },
       -- Add vim-surround (ds, cs, ys, yss commands)
       { "tpope/vim-surround" },
       -- Adds multi-cursor support
@@ -140,12 +141,12 @@ local config = {
       compile_path = vim.fn.stdpath "config" .. "/lua/packer_compiled.lua",
     },
     -- StatusLine theme overrides
-    feline = {
-      theme = {
-        fg = "#887b6d",
-        bg = "#3c3836"
-      }
-    },
+    -- feline = {
+    --   theme = {
+    --     fg = "#887b6d",
+    --     bg = "#3c3836"
+    --   }
+    -- },
     -- Include hidden (dotfiles) in search results
     telescope = {
       defaults = {

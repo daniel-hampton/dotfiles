@@ -143,5 +143,8 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # Add Golang to path
-export PATH="$PATH:$PATH:/usr/local/go/bin"
+export PATH="$PATH:/usr/local/go/bin"
+
+# Add Laravel (composer vendor folder) to path
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
