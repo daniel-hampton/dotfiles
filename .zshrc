@@ -126,6 +126,9 @@ export ANSIBLE_INVENTORY_ENABLED="host_list, script, auto, yaml, ini, toml, gcp_
 # For Git Credential Manager
 export GPG_TTY=$(tty)
 
+# Add home bin
+export PATH="$PATH:$HOME/.local/bin"
+
 # Add Flutter to path
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"

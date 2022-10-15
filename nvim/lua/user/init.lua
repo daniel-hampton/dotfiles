@@ -95,7 +95,7 @@ local config = {
       -- Adds multi-cursor support
       { "mg979/vim-visual-multi" },
       -- Vim Easy Align
-      { "junegunn/vim-easy-align"},
+      { "junegunn/vim-easy-align" },
       -- treesitter plugin for 'sticky' LSP context
       { "nvim-treesitter/nvim-treesitter-context" },
       -- Harpoon for quick file navigation
@@ -175,7 +175,7 @@ local config = {
         }
       }
     },
-    cinnamon = {default_keymaps = false},
+    cinnamon = { default_keymaps = false },
     ["aerial"] = {}
   },
 
@@ -268,7 +268,7 @@ local config = {
     vim.keymap.set("v", "ga", ":LiveEasyAlign<CR>")
     -- vim.keymap.set("n", "ga", ":EasyAlign<CR>")
     -- vim.keymap.set("v", "ga", ":EasyAlign<CR>")
-    vim.keymap.set("n", "<C-w>o", ":%bd|edit#|bd#<CR>", {desc="Close other buffers"})
+    vim.keymap.set("n", "<C-w>o", ":%bd|edit#|bd#<CR>", { desc = "Close other buffers" })
 
     -- Harpoon
     local opts = { noremap = true, silent = true }
