@@ -243,14 +243,6 @@ local config = {
                                         require("leap").opts.safe_labels = {}
                                 end
                         },
-                        -- Catppuccin colorscheme
-                        {
-                                "catppuccin/nvim",
-                                as = "catppuccin",
-                                config = function()
-                                        require("catppuccin").setup {}
-                                end
-                        }
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
                 ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
