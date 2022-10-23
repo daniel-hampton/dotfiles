@@ -192,10 +192,30 @@ local config = {
                         ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
                         -- quick save
                         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+                        -- My added keybinds, shortcuts, mappings
+                        -- Harpoon
+                        ["<leader>fm"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "harpoon add file" },
+                        ["<leader>fj"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", desc = "harpoon nav file 1" },
+                        ["<leader>fk"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", desc = "harpoon nav file 2" },
+                        ["<leader>fl"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", desc = "harpoon nav file 3" },
+                        ["<leader>f;"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", desc = "harpoon nav file 4" },
+                        ["<leader>fh"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
+                                desc = "harpoon toggle quick menu" },
+
+                        -- LiveEasyAlign
+                        ["ga"] = { ":LiveEasyAlign<cr>", desc = "LiveEasyAlign" },
+
+                        -- Close other buffers
+                        ["<C-w>o"] = { ":%bd|edit#|bd#<CR>", desc = "Close other buffers" },
                 },
                 t = {
                         -- setting a mapping to false will disable it
                         -- ["<esc>"] = false,
+                },
+
+                v = {
+                        ["ga"] = { ":LiveEasyAlign<cr>", desc = "LiveEasyAlign" },
                 },
         },
 
