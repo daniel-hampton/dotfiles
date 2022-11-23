@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Obsidian
+Comment=Networked note taking application
+Exec=/home/dhampton/.local/bin/obsidian
+Icon=/home/dhampton/Pictures/icons/obsidian.png
+Terminal=false
+Type=Application
+Categories=Productivity
