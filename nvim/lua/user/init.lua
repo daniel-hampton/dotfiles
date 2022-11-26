@@ -54,6 +54,7 @@ local config = {
       autopairs_enabled = true, -- enable autopairs at start
       diagnostics_enabled = true, -- enable diagnostics at start
       status_diagnostics_enabled = true, -- enable diagnostics in statusline
+      copilot_assume_mapped = true, -- tell copilot it's okay Tab is in use elsewhere.
     },
   },
   -- If you need more control, you can use the function()...end notation
@@ -183,6 +184,10 @@ local config = {
   -- automatically pick-up stored data by this setting.)
   mappings = {
     -- first key is the mode
+    i = {
+      -- Custom accept keybind for Github Copilot
+      ["<C-k>"] = { "copilot#Accept('<CR>')", silent = true, expr = true },
+    },
     n = {
       -- second key is the lefthand side of the map
       -- mappings seen under group name "Buffer"
