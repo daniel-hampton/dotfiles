@@ -141,13 +141,13 @@ export PATH="$PATH":"$HOME/flutter/bin/cache/dart-sdk/bin"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # pnpm
-export PNPM_HOME="/home/dhampton/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # Add Golang to path
 export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:/home/dhampton/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 # Add Laravel (composer vendor folder) to path
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"

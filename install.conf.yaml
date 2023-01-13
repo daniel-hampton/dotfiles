@@ -2,16 +2,29 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
+# Home dir config files
 - link:
+    ~/.zshrc: zshrc
+    ~/.p10k.zsh: p10k.zsh
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
+
+# nvim
+- link:
+    ~/.config/nvim/lua/init.lua: nvim/lua/user/init.lua
 
 - create:
     - ~/downloads
-    - ~/.vim/undo-history
+
+- create:
+    ~/.ssh:
+      mode: 0700
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
+    # Install apt packages
+    - command: ./apt-packages.sh
+      description: Installing apt packages
+      stdout: true
+      sterr: true
