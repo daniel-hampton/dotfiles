@@ -24,7 +24,7 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     # Install apt packages
-    - command: ./apt-packages.sh
-      description: Installing apt packages
-      stdout: true
-      sterr: true
+    # - command: ./apt-packages.sh
+    #   description: Installing apt packages
+    #   stdout: true
+    #   sterr: true
