@@ -4,6 +4,8 @@ My configuration dotfiles
 
 ## To Do
 
+- ssh server
+
 ## Pop!\_OS manual installs
 
 - GitHub CLI to authorize git cli
