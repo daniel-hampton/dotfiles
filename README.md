@@ -37,6 +37,10 @@ My configuration dotfiles
 
   - installed via deb package downloaded from website.
 
+- Docker
+
+  - see scripts in `docker` folder
+
 - Pop Shop (many of these are Flatpaks)
 
   - Bitwarden
