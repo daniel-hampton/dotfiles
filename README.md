@@ -4,7 +4,7 @@ My configuration dotfiles
 
 ## To Do
 
-- ssh server
+- NVM
 
 ## Pop!\_OS manual installs
 
@@ -28,6 +28,10 @@ My configuration dotfiles
   - Set terminal to use the `JetBrainsMono Nerd Font Mono`
   - Set VS Code settings editor & terminal to the same.
   - Finally got the glyphs to show correct in neovim.
+
+- Node Version Manager
+
+  - [Docs to install](https://github.com/nvm-sh/nvm#install--update-script)
 
 - Visual Studio Code
 
