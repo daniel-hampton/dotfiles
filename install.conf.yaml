@@ -10,14 +10,10 @@
     ~/.p10k.zsh: p10k.zsh
     ~/.tmux.conf: tmux.conf
     ~/.profile: profile
-    ~/.fonts: fonts
-
-# nvim
-- link:
-    ~/.config/nvim/lua/init.lua: nvim/lua/user/init.lua
 
 - create:
     - ~/downloads
+    - ~/.local/share/fonts
 
 - create:
     ~/.ssh:
@@ -27,8 +23,14 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [./apt-packages.sh, Install apt packages]
     - [./ohmyzsh/install.sh, Installing oh-my-zsh]
+    - [./nvim/nvim_install.sh, Installing neovim]
+    - [./nvim/astronvim_install.sh, Installing astronvim]
     # Install apt packages
     # - command: ./apt-packages.sh
     #   description: Installing apt packages
     #   stdout: true
     #   sterr: true
+
+# nvim config. Have to link after astronvim installed
+- link:
+    ~/.config/nvim/lua/init.lua: nvim/lua/user/init.lua

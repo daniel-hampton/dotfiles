@@ -4,10 +4,6 @@ My configuration dotfiles
 
 ## To Do
 
-- [ ] zsh install
-- [ ] neovim install
-- [ ] astronvim install?
-
 ## Pop!\_OS manual installs
 
 - GitHub CLI to authorize git cli
@@ -25,6 +21,11 @@ My configuration dotfiles
 - Neovim
 
   - install from nvim folder
+  - Fonts. Installed nerd font from `fonts` folder via the UI. Having trouble
+    with cli commands.
+  - Set terminal to use the `JetBrainsMono Nerd Font Mono`
+  - Set VS Code settings editor & terminal to the same.
+  - Finally got the glyphs to show correct in neovim.
 
 - Visual Studio Code
 
