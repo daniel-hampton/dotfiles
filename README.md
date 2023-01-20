@@ -14,6 +14,12 @@ My configuration dotfiles
 
   - https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 
+- Oh My Zsh
+
+  - need to install `zsh` first. It's in `apt-packages.sh`
+  - use the install script in the `ohmyzsh` folder.
+  - [docs](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+
 - Visual Studio Code
 
   - installed via deb package downloaded from website.

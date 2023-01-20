@@ -24,6 +24,8 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [./apt-packages.sh, Install apt packages]
+    - [./ohmyzsh/install.sh, Installing oh-my-zsh]
     # Install apt packages
     # - command: ./apt-packages.sh
     #   description: Installing apt packages
