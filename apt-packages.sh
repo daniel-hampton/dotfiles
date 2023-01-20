@@ -1,2 +1,3 @@
 sudo apt install -y \
-  aptitude
+  aptitude \
+  xcape
