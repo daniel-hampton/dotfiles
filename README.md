@@ -19,6 +19,12 @@ My configuration dotfiles
   - need to install `zsh` first. It's in `apt-packages.sh`
   - use the install script in the `ohmyzsh` folder.
   - [docs](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+  - fonts seems to be linked by dotbot.
+  - script to cache fonts in `ohmyzsh` folder.
+
+- Neovim
+
+  - install from nvim folder
 
 - Visual Studio Code
 
