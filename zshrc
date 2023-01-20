@@ -134,8 +134,9 @@ export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
 export PATH="$PATH":"$HOME/flutter/bin/cache/dart-sdk/bin"
 
-
+if [ -f "$HOME/.cargo/env" ]; then
 . "$HOME/.cargo/env"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
