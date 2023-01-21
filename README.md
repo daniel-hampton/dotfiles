@@ -47,7 +47,7 @@ My configuration dotfiles
   - Slack
   - Flameshot
   - Spotify
-  - OBS Studio
+  - OBS Studio (see folder for settings backup? TBD)
   - Krita
   - Google Chrome (dev)
   - Brave browser
