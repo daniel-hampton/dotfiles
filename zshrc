@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/dhampton/completions:"* ]]; then export FPATH="/home/dhampton/completions:$FPATH"; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -180,3 +182,7 @@ if type compdef &>/dev/null; then
 fi
 
 ###-end-ionic-completion-###
+. "/home/dhampton/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
